@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Popins:wht@200;400;700display=swap");
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("images/s-6.webp");
+
+  /* Full height */
+  height: 50%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 5s;
+  animation: animate;
+  animation-direction: alternate-reverse;
+  animation-play-state: running;
+  animation-timing-function: ease-in-out;
+  animation-duration: 33s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+@keyframes animate {
+  0% {
+    background-image: url(images/s-4.jpg);
+  }
+  20% {
+    background-image: url(images/s-5.png);
+  }
+  40% {
+    background-image: url(images/s-8.jpeg);
+  }
+  60% {
+    background-image: url(images/f-2.jpg);
+  }
+  80% {
+    background-image: url(images/s-7.jpg);
+  }
+  100% {
+    background-image: url(images/s-6.webp);
+  }
+}
+
+.header-text {
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: 700;
+  transition: all 6s;
+  animation: text 6s ease-in 4s;
+}
+/* NAVIGATION CSSs ////////
+////////////////////////*/
+@keyframes text {
+  from {
+    transform: translateX(-100%);
+    filter: blur(5px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+  }
+}
+
+.second-div {
+  margin-top: 150px;
+}
+.btn {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px 70px;
+}
+
+.images-box {
+  display: flex;
+  gap: 10px;
+  background-color: white;
+  margin-top: 150px;
+}
+
+.tag-list {
+  list-style: none;
+  margin: 0;
+  padding-inline: 0;
+}
+
+.tag-list li {
+  padding: 1rem;
+  background: var(--clr-primary-400);
+  border-radius: 0.5rem;
+  color: white;
+}
+
+.scroller {
+  max-width: 100%;
+  background-color: rgb(38, 39, 37) 3;
+  margin-top: 100px;
+}
+
+.scroller-inner {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.scroller[data-animate="true"] {
+  overflow: hidden;
+  mask: linear-gradient(90deg, transparent, white 20% white 80% transparent);
+}
+
+.scroller[data-animate="true"],
+.scroller-inner {
+  width: fit-content;
+  flex-wrap: nowrap;
+  animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+.test {
+  color: red !important;
+}
+
+.image {
+  width: 85px !important;
+  height: 60px !important;
+}
