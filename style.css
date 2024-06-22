@@ -9,6 +9,8 @@ html {
   background-color: #e0dcdc;
 }
 
+body {
+}
 .bg {
   /* The image used */
   background-image: url("images/s-6.webp");
@@ -98,8 +100,8 @@ html {
 }
 
 .images {
-  width: 50px;
-  height: 45px;
+  width: 60px;
+  height: 55px;
 }
 
 .scroller {
@@ -167,7 +169,7 @@ html {
   }
 }
 
-.item-1,
+/* .item-1,
 .item-2,
 .item-3 {
   position: absolute;
@@ -246,4 +248,4 @@ html {
     left: 110%;
     opacity: 0;
   }
-}
+} */
