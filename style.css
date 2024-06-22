@@ -5,6 +5,7 @@ html {
   height: 100%;
   margin: 0;
   padding: 0;
+  /* overflow: hidden; */
 }
 
 .bg {
@@ -18,18 +19,18 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  transition: 5s;
+  transition: 15s;
   animation: animate;
   animation-direction: alternate-reverse;
   animation-play-state: running;
   animation-timing-function: ease-in-out;
-  animation-duration: 33s;
+  animation-duration: 63s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
 }
 @keyframes animate {
   0% {
-    background-image: url(images/s-4.jpg);
+    background-image: url(images/m-6.jpeg);
   }
   20% {
     background-image: url(images/s-5.png);
@@ -38,7 +39,7 @@ html {
     background-image: url(images/s-8.jpeg);
   }
   60% {
-    background-image: url(images/f-2.jpg);
+    background-image: url(images/l-1.jfif);
   }
   80% {
     background-image: url(images/s-7.jpg);
@@ -54,6 +55,15 @@ html {
   font-weight: 700;
   transition: all 6s;
   animation: text 6s ease-in 4s;
+  animation-delay: 10s;
+}
+.header-text2 {
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: 700;
+  transition: all 6s;
+  animation: text 6s ease-in 4s;
+  animation-delay: 4s;
 }
 /* NAVIGATION CSSs ////////
 ////////////////////////*/
@@ -86,52 +96,153 @@ html {
   margin-top: 150px;
 }
 
-.tag-list {
-  list-style: none;
-  margin: 0;
-  padding-inline: 0;
-}
-
-.tag-list li {
-  padding: 1rem;
-  background: var(--clr-primary-400);
-  border-radius: 0.5rem;
-  color: white;
+.images {
+  width: 50px;
+  height: 45px;
 }
 
 .scroller {
-  max-width: 100%;
-  background-color: rgb(38, 39, 37) 3;
-  margin-top: 100px;
-}
-
-.scroller-inner {
+  position: relative;
   display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-.scroller[data-animate="true"] {
+  max-width: 1300px;
   overflow: hidden;
-  mask: linear-gradient(90deg, transparent, white 20% white 80% transparent);
+  --webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 90%,
+    transparent
+  );
+}
+.inner-scroller span {
+  display: inline-flex;
+  margin: 10px;
+  letter-spacing: 0.2rem;
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: 1s;
 }
 
-.scroller[data-animate="true"],
-.scroller-inner {
-  width: fit-content;
-  flex-wrap: nowrap;
-  animation: scroll 30s linear infinite;
+.inner-scroller span:hover {
+  background: #3fd2f9;
+  cursor: pointer;
 }
 
+.inner-scroller {
+  white-space: nowrap;
+  animation: scroll var(--time) linear infinite;
+  animation-delay: calc(var(--time) / -1);
+}
+
+.inner-scroller:nth-child(2) {
+  animation: scroll2 var(--time) linear infinite;
+  animation-delay: calc(var(--time) / -2);
+}
+/* //////////////////////////////
+/* ///////////////////////////// */
 @keyframes scroll {
-  to {
-    transform: translate(calc(-50% - 0.5rem));
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
-.test {
-  color: red !important;
+@keyframes scroll2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
 }
 
-.image {
-  width: 85px !important;
-  height: 60px !important;
+.item-1,
+.item-2,
+.item-3 {
+  position: absolute;
+  display: block;
+  top: 2em;
+
+  width: 60%;
+
+  font-size: 2em;
+  transition: all 4s;
+  animation-duration: 40s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.item-1 {
+  animation-name: anim-1;
+}
+
+.item-2 {
+  animation-name: anim-2;
+}
+
+.item-3 {
+  animation-name: anim-3;
+}
+
+@keyframes anim-1 {
+  0%,
+  8.3% {
+    left: -100%;
+    opacity: 0;
+  }
+  8.3%,
+  25% {
+    left: 25%;
+    opacity: 1;
+  }
+  33.33%,
+  100% {
+    left: 110%;
+    opacity: 0;
+  }
+}
+
+@keyframes anim-2 {
+  0%,
+  33.33% {
+    left: -100%;
+    opacity: 0;
+  }
+  41.63%,
+  58.29% {
+    left: 25%;
+    opacity: 1;
+  }
+  66.66%,
+  100% {
+    left: 110%;
+    opacity: 0;
+  }
+}
+
+@keyframes anim-3 {
+  0%,
+  66.66% {
+    left: -100%;
+    opacity: 0;
+  }
+  74.96%,
+  91.62% {
+    left: 25%;
+    opacity: 1;
+  }
+  100% {
+    left: 110%;
+    opacity: 0;
+  }
 }

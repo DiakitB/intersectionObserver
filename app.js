@@ -18,19 +18,21 @@ window.onload = function () {
 };
 
 const scrollers = document.querySelectorAll(".scroller");
+console.log(scrollers);
 if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   addAnimation();
 }
+
 function addAnimation() {
   scrollers.forEach((scroller) => {
     scroller.setAttribute("data-animated", true);
     const scrollerInner = scroller.querySelector(".scroller-inner");
     const scrollerContent = Array.from(scrollerInner.children);
     scrollerContent.forEach((item) => {
-      const duplicateItem = item.cloneNode(true);
-      console.log(duplicateItem);
-      duplicateItem.setAttribute("aria-hidden", true);
-      scrollerInner.appendChild(duplicateItem);
+      const duplicatedItems = item.cloneNode(true);
+      console.log(duplicatedItems);
+      duplicatedItems.setAttribute("ara-hidden", true);
+      scrollerInner.appendChild(duplicatedItems);
     });
   });
 }
