@@ -17,22 +17,22 @@ window.onload = function () {
   document.querySelector(".imgs").style.display = "none";
 };
 
-const scrollers = document.querySelectorAll(".scroller");
-console.log(scrollers);
-if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  addAnimation();
-}
+// const scrollers = document.querySelectorAll(".scroller");
+// console.log(scrollers);
+// if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+//   addAnimation();
+// }
 
-function addAnimation() {
-  scrollers.forEach((scroller) => {
-    scroller.setAttribute("data-animated", true);
-    const scrollerInner = scroller.querySelector(".scroller-inner");
-    const scrollerContent = Array.from(scrollerInner.children);
-    scrollerContent.forEach((item) => {
-      const duplicatedItems = item.cloneNode(true);
-      console.log(duplicatedItems);
-      duplicatedItems.setAttribute("ara-hidden", true);
-      scrollerInner.appendChild(duplicatedItems);
-    });
-  });
-}
+// function addAnimation() {
+//   scrollers.forEach((scroller) => {
+//     scroller.setAttribute("data-animated", true);
+//     const scrollerInner = scroller.querySelector(".scroller-inner");
+//     const scrollerContent = Array.from(scrollerInner.children);
+//     scrollerContent.forEach((item) => {
+//       const duplicatedItems = item.cloneNode(true);
+//       console.log(duplicatedItems);
+//       duplicatedItems.setAttribute("ara-hidden", true);
+//       scrollerInner.appendChild(duplicatedItems);
+//     });
+//   });
+// }
