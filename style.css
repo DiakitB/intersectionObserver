@@ -513,8 +513,9 @@ a.wrimagecard:hover,
 }
 
 .customers {
-  font-size: 3rem;
+  font-size: 2rem;
+  margin-bottom: 0%;
   font-family: "Readex Pro", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 600;
+  font-weight: 500;
 }
