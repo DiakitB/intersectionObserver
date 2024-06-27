@@ -11,7 +11,7 @@ html {
   margin: 0;
   padding: 0;
   /* overflow: hidden; */
-  background-color: #f8fafa;
+  background-color: white;
   font-family: "Readex Pro", sans-serif;
 }
 
@@ -66,16 +66,19 @@ html {
 ///////////// NAV-BAR START///////////*/
 
 .navbar-custom {
-  background-color: rgb(9, 5, 53);
+  background-color: rgb(54, 160, 160);
 }
 
-/* .navbar-custom .navbar-brand,
-.navbar-custom {
-  color: orange;
-} */
-/* .navbar-text {
-  color: orange;
-} */
+.nav-link {
+  color: orange !important;
+  font-size: 0.9rem;
+  font-family: "Readex Pro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings: "HEXP" 0;
+  transition: all 0.9s;
+}
 
 a:link,
 .a:link:visited {
@@ -514,6 +517,15 @@ a.wrimagecard:hover,
 
 .customers {
   font-size: 2rem;
+  margin-bottom: 0%;
+  font-family: "Readex Pro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+}
+
+.slogan {
+  color: orange !important;
+  font-size: 1rem;
   margin-bottom: 0%;
   font-family: "Readex Pro", sans-serif;
   font-optical-sizing: auto;
