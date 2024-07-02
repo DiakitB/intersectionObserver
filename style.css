@@ -23,7 +23,7 @@ html {
 ////////////////////////*/
 .bg {
   /* The image used */
-  background-image: url("scroller-images/d-2.png");
+  background-image: url("scroller-images/i-1.png");
   padding-top: 100px;
 
   /* Full height */
@@ -38,21 +38,21 @@ html {
   animation-direction: alternate-reverse;
   animation-play-state: running;
   animation-timing-function: ease-in-out;
-  animation-duration: 63s;
+  animation-duration: 30s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
 }
 @keyframes animate {
   0% {
-    background-image: url(scroller-images/d-2.png);
+    background-image: url(scroller-images/i-1.png);
   }
-  15% {
-    background-image: url(scroller-images/7.png);
+  50% {
+    background-image: url(scroller-images/i-2.png);
   }
-  30% {
-    background-image: url(scroller-images/d-5.png);
+  100% {
+    background-image: url(scroller-images/e-3.png);
   }
-  45% {
+  /* 45% {
     background-image: url(scroller-images/baring.png);
   }
   60% {
@@ -63,7 +63,7 @@ html {
   }
   100% {
     background-image: url(scroller-images/17\ arm.png);
-  }
+  } */
 }
 
 /* BACKGROUND-IMAGE END////////
