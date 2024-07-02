@@ -11,8 +11,12 @@ html {
   margin: 0;
   padding: 0;
   /* overflow: hidden; */
-  background-color: white;
-  font-family: "Readex Pro", sans-serif;
+  /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=48c8d5&c2=4a7a9a&gt=l&gd=dbb
+*/
+  background: #48c8d5;
+  background: linear-gradient(0deg, #48c8d5, #4a7a9a);
 }
 
 /* BACKGROUND IMAGE STARTS ////////
@@ -43,19 +47,19 @@ html {
     background-image: url(scroller-images/d-2.png);
   }
   15% {
-    background-image: url(scroller-images/hub17.png);
+    background-image: url(scroller-images/7.png);
   }
   30% {
     background-image: url(scroller-images/d-5.png);
   }
   45% {
-    background-image: url(scroller-images/d-10.png);
+    background-image: url(scroller-images/baring.png);
   }
   60% {
     background-image: url(scroller-images/d-7.png);
   }
   80% {
-    background-image: url(scroller-images/d-8.png);
+    background-image: url(scroller-images/8.png);
   }
   100% {
     background-image: url(scroller-images/17\ arm.png);
@@ -66,7 +70,7 @@ html {
 ///////////// NAV-BAR START///////////*/
 
 .navbar-custom {
-  background-color: rgb(54, 160, 160);
+  /* background-color: rgb(54, 160, 160); */
 }
 
 .nav-link {
